@@ -43,3 +43,13 @@ class Post(models.Model):
 
     def __str__(self):
         return self.content[:20]
+
+class Animal(models.Model):
+    animal_id = models.AutoField(primary_key= True)
+    rescued_at = models.DateTimeField(auto_now_add = False)
+    animal_name = models.CharField(max_length=30)
+    animal_race = models.CharField(max_length= 100)
+    animal_bio = models.TextField()
+    def __str__(self):
+        return self.name
+    
