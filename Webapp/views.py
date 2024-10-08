@@ -5,6 +5,7 @@ from django.views.generic.edit import CreateView
 from django.urls import reverse_lazy
 from django.shortcuts import redirect
 from django.contrib.auth import login
+from django.contrib.auth import views as auth_views
 from .models import usermodel
 from .forms import UserRegisterForm
 
@@ -18,3 +19,10 @@ class UserRegisterView(CreateView):
         user = form.save()  
         login(self.request, user)  
         return redirect(self.success_url)  
+
+class UserLoginView(auth_views.LoginView):
+    template_name = "login.html"
+    success_url = reverse_lazy('index')
+
+    def get_success_url(self):
+        return self.success_url

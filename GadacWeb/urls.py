@@ -16,10 +16,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from Webapp.views import UserRegisterView
+from Webapp.views import UserRegisterView, UserLoginView
+from django.http import HttpResponse
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     
-    path('register/', UserRegisterView.as_view(), name='register')
+    path('register/', UserRegisterView.as_view(), name='register'),
+    path('login/', UserLoginView.as_view(), name='login'),
+
+    #Rota provisoria pra testar o redirecionamento do login. Tenho TDAH te amo jaum (ASS: Irlan, Elias e Xande)
+    path('', lambda r: HttpResponse('Twenty one pilots'), name='index')
+    
 ]
+

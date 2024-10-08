@@ -28,3 +28,4 @@ class UserRegisterForm(forms.ModelForm):
         if commit:
             user.save()  # Salva o usuário no banco de dados
         return user
+
