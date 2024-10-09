@@ -8,7 +8,7 @@ import os
 # Create your models here.
 
 class UserManager(BaseUserManager):
-        def manager_user(self, username, password, email, **extra_fields):
+        def create_user(self, username, password, email, **extra_fields):
             if not username:
                 raise ValueError('The Username field must be set')
             user = self.model(username=username, email=email)
@@ -20,29 +20,30 @@ class UserManager(BaseUserManager):
             extra_fields.setdefault('is_staff', True)
             extra_fields.setdefault('is_superuser', True)
 
-             # Verifica se os campos obrigatórios foram definidos
+            # Verifica se os campos obrigatórios foram definidos
             if extra_fields.get('is_staff') is not True:
                 raise ValueError('Superuser must have is_staff=True.')
             if extra_fields.get('is_superuser') is not True:
                 raise ValueError('Superuser must have is_superuser=True.')
             
+            return self.create_user(username, password, email, **extra_fields) 
 
 
 class usermodel(AbstractBaseUser):
     username = models.CharField(max_length=30, unique=True, null=False)
-    user_email = models.EmailField(unique=True, null=False)
+    email = models.EmailField(unique=True, null=False)
     user_id = models.AutoField(primary_key=True)
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
-    user_phoneNum = models.CharField(max_length=50)
-    user_age = models.IntegerField(null=False)
-    cep = models.IntegerField()
-    pref_adopt = models.TextField()
+    user_phoneNum = models.CharField(max_length=50, null=True)
+    user_age = models.IntegerField(null=True)
+    cep = models.IntegerField(null=True)
+    pref_adopt = models.TextField(null=True)
 
     objects = UserManager()
 
     USERNAME_FIELD = 'username'
-    REQUIRED_FIELDS = ['user_email']  # Corrigido para usar o nome do campo
+    REQUIRED_FIELDS = ['email']  # Corrigido para usar o nome do campo
 
 
 
