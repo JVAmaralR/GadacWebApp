@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from Webapp.views import UserRegisterView, UserLoginView
 from django.http import HttpResponse
+from . import urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,7 +27,7 @@ urlpatterns = [
     path('login/', UserLoginView.as_view(), name='login'),
 
     #Rota provisoria pra testar o redirecionamento do login. Tenho TDAH te amo jaum (ASS: Irlan, Elias e Xande)
-    path('', lambda r: HttpResponse('Twenty one pilots'), name='index')
+    path('', lambda r: HttpResponse('Twenty one pilots'), name='index'),
     
 ]
 

@@ -1,0 +1,38 @@
+{% load static %} <!-- Carrega os arqquivos estáticos. -->
+<link rel="stylesheet" href="{% static 'global/static/css/style-navbar.css' %}"> <!-- Carrega o CSS. -->
+<nav class="navbar">
+    <!-- Logotipo do site. -->
+    <div class="logo">
+        <img src="{% static '' %}" alt="GADAC Logo">
+        <h1>GADAC</h1>
+    </div>
+
+    <!-- Links de navegação. -->
+    <ul class="navbar-links">
+        <li><a href="#">Doação</a></li>
+        <span class="divider"></span> <!-- Barrinha entre os links. -->
+        <li><a href="#">Adote</a></li>
+        <span class="divider"></span> <!-- Barrinha entre os links. -->
+        <li><a href="#">Quem Somos</a></li>
+        <span class="divider"></span> <!-- Barrinha entre os links. -->
+        <li><a href="#">Resgate</a></li>
+        <span class="divider"></span> <!-- Barrinha entre os links. -->
+
+        <!-- Links de autenticação. -->
+
+        <!-- Se o usuário estiver logado. Ele irá ver a opção de logout. -->
+        {% if user.is_authenticated %}
+            <li><a href="#">Logout</a></li>
+        <!-- Caso contrário, irá ver as opções de login e de se cadastrar -->
+        {% else %}
+            <li><a href="#">Login</a></li>
+            <span class="divider"></span> <!-- Barrinha entre login e cadastro. -->
+            <li><a href="#">Cadastrar</a></li>
+        {% endif %}
+    </ul>
+
+    <!-- Ícone de usuário. -->
+    <div class="user-icons">
+        <a href="#"><img src="{% static 'global/static/img/user-icon.png' %}" alt="User Icon"></a>
+    </div>
+</nav>
