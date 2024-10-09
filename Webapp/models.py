@@ -11,7 +11,7 @@ class UserManager(BaseUserManager):
         def create_user(self, username, password, email, **extra_fields):
             if not username:
                 raise ValueError('The Username field must be set')
-            user = self.model(username=username, email=email)
+            user = self.model(username=username, email=email, **extra_fields)
             user.set_password(password)
             user.save(using=self._db)
             return user
@@ -27,6 +27,7 @@ class UserManager(BaseUserManager):
                 raise ValueError('Superuser must have is_superuser=True.')
             
             return self.create_user(username, password, email, **extra_fields) 
+        
 
 
 class usermodel(AbstractBaseUser):
@@ -45,6 +46,17 @@ class usermodel(AbstractBaseUser):
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = ['email']  # Corrigido para usar o nome do campo
 
+    def has_perm(self, perm, obj=None):
+        """
+        Verifica se o usuário tem uma permissão específica.
+        """
+        return True
+        
+    def has_module_perms(self, app_label):
+        """
+        Verifica se o usuário tem permissão para acessar uma aplicação específica.
+        """
+        return True
 
 
 class Post(models.Model):
