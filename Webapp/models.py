@@ -65,7 +65,7 @@ class Post(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     post_categ = models.CharField(max_length=20)
     post_author = models.ForeignKey('usermodel', on_delete=models.CASCADE)
-
+    post_image = models.ImageField(upload_to='posts/', blank=True, null=True)
     def __str__(self):
         return self.content[:20]
 
@@ -75,6 +75,7 @@ class Animal(models.Model):
     animal_name = models.CharField(max_length=30)
     animal_race = models.CharField(max_length= 100)
     animal_bio = models.TextField()
+    animal_image = models.ImageField(upload_to='animals/', blank=True, null=True)  # Adicionando campo de imagem
     def __str__(self):
         return self.name
     

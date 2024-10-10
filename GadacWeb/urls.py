@@ -19,6 +19,8 @@ from django.urls import path, include
 from Webapp.views import UserRegisterView, UserLoginView
 from django.http import HttpResponse
 from . import urls
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,5 +32,4 @@ urlpatterns = [
     path('', lambda r: HttpResponse('Twenty one pilots'), name='index'),
     path("navbar/", include("Webapp.urls"))
     
-]
-
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
