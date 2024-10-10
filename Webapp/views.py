@@ -30,3 +30,7 @@ class UserLoginView(auth_views.LoginView):
 
 def navbar(request):
     return render(request, "teste-navbar.html")
+
+def sobrenos(request):
+    return render(request, "teste-sobrenos.html")
+

@@ -1,0 +1,69 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, white 33%, rgb(10, 116, 143) 33%, rgb(10, 116, 143) 66%, white 66%);
+}
+
+.titulo {
+    position: absolute;
+    top: 22%;
+    left: 60%;
+    transform: translate(-50%, -25%);
+    font-size: 4rem;
+    color: black;
+    z-index: 10; /* Sobrepõe os outros elementos */
+}
+
+/* Estilos gerais para os quadrados */
+.quadrado {
+    width: 180px;
+    height: 450px;
+    background-color: gray;
+    position: absolute;
+}
+
+
+/* Estilo do primeiro quadrado */
+.quadrado1 {
+    top: 48%;
+    left: 22%;
+    transform: translate(-60%, -60%);
+    z-index: 1; /* Fica abaixo do segundo quadrado */
+}
+
+/* Estilo do segundo quadrado (sobrepõe o primeiro) */
+.quadrado2 {
+    top: 55%;
+    left: 28%;
+    transform: translate(-60%, -60%);
+    z-index: 2;
+    box-shadow: -2px 2px 18px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo para a bolinha */
+.bolinha {
+    width: 130px;
+    height: 130px;
+    background-color: gray;
+    border-radius: 50%;
+    position: absolute;
+    top: 38%; /* Ajusta a posição vertical */
+    left: 28%; /* Posiciona ao lado do quadrado da frente */
+    z-index: 3; /* Sobrepõe os quadrados */
+    box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.6);
+}
+
+.texto {
+    position: absolute;
+    top: 48%;
+    left: 50%; /* Posição à direita dos quadrados e da bolinha */
+    transform: translateY(-50%);
+    color: white;
+    font-size: 1.4rem;
+    max-width: 500px; /* Define uma largura máxima para o texto */
+    z-index: 5;
+}
+

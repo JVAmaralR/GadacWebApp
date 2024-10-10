@@ -33,7 +33,8 @@ urlpatterns = [
 
     #Rota provisoria pra testar o redirecionamento do login. Tenho TDAH te amo jaum (ASS: Irlan, Elias e Xande)
     path('', lambda r: render(r, 'index.html'), name='index'),
-    path("navbar/", include("Webapp.urls"))
+    path("navbar/", include("Webapp.urls")),
+    path("sobrenos/", include("Webapp.urls"))
     
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

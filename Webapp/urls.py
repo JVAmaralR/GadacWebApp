@@ -7,3 +7,7 @@ from . import views
 urlpatterns = [
     path("", views.navbar)
 ]
+
+urlpatterns = [
+    path("", views.sobrenos)
+]
