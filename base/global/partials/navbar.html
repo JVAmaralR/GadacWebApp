@@ -1,10 +1,11 @@
-{% load static %} <!-- Carrega os arqquivos estáticos. -->
-<link rel="stylesheet" href="{% static 'global/static/css/style-navbar.css' %}"> <!-- Carrega o CSS. -->
+{% load static %}
+<link rel="stylesheet" href="{% static "global/static/css/style-navbar.css" %}">
 <nav class="navbar">
-    <!-- Logotipo do site. -->
-    <div class="logo">
-        <img src="{% static '' %}" alt="GADAC Logo">
-        <h1>GADAC</h1>
+    <!-- Logotipo do site com link dentro de uma div container. -->
+    <div class="logo-container">
+        <div class="logo">
+            <a href="#"><img src="{% static 'global/static/img/gadac.png' %}" alt="GADAC Logo"></a>
+        </div>
     </div>
 
     <!-- Links de navegação. -->
@@ -19,11 +20,8 @@
         <span class="divider"></span> <!-- Barrinha entre os links. -->
 
         <!-- Links de autenticação. -->
-
-        <!-- Se o usuário estiver logado. Ele irá ver a opção de logout. -->
         {% if user.is_authenticated %}
             <li><a href="#">Logout</a></li>
-        <!-- Caso contrário, irá ver as opções de login e de se cadastrar -->
         {% else %}
             <li><a href="#">Login</a></li>
             <span class="divider"></span> <!-- Barrinha entre login e cadastro. -->

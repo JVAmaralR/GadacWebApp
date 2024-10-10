@@ -1,32 +1,27 @@
-/* Zera as configurações da margin. */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0; 
+    margin: 0;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #FFCC33; /* Cor de fundo da navbar. */
+    background-color: #FFCC33; /* Cor de fundo amarela */
     padding: 10px 20px;
 }
 
-.logo {
+/* Adiciona a nova div logo-container */
+.logo-container {
     display: flex;
-    align-items: center;
+    justify-content: center; /* Centraliza a logo horizontalmente */
+    align-items: center;     /* Centraliza a logo verticalmente */
+    width: 200px;            /* Controla o espaço ao redor da logo */
 }
 
 .logo img {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-}
-
-.logo h1 {
-    color: #333;
-    font-size: 24px;
-    font-weight: bold;
+    width: 180px; /* Ajuste de largura da logo */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: contain;
 }
 
 .navbar-links {
@@ -36,27 +31,26 @@ body {
     align-items: center;
 }
 
-.navbar-links li {
-    display: inline;
-}
-
 .navbar-links a {
     color: #333;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
+    position: relative; /* Adicionado para o efeito de movimento */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transições suaves */
 }
 
 .navbar-links a:hover {
-    color: #E69400; /* Cor para hover nos links. */
+    color: #E69400; /* Cor de hover */
+    text-decoration: underline; /* Adiciona sublinhado */
+    transform: translateY(-3px); /* Move o link para cima */
 }
 
-/* Estilo para as barrinhas separadoras. */
 .divider {
     display: inline-block;
     height: 25px;
     width: 2px;
-    background-color: #333; /* Cor da barrinha. */
+    background-color: #333;
     margin: 0 10px;
 }
 
@@ -65,9 +59,4 @@ body {
     height: 40px;
     border-radius: 50%;
     margin-left: 15px;
-}
-
-.user-icons a {
-    display: inline-block;
-    vertical-align: middle;
 }
