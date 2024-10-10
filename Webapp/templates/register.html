@@ -10,59 +10,19 @@
     <h1>Cadastro de Usuário</h1>
 
     <form method="post">
+
         {% csrf_token %}  <!-- Proteção contra CSRF -->
         {{ form.non_field_errors }}  <!-- Exibe erros globais do formulário -->
 
+        {% for field in form %}
         <div>
-            <label for="{{ form.username.id_for_label }}">Nome de Usuário:</label>
-            {{ form.username }}  <!-- Renderiza o campo de nome de usuário -->
-            {{ form.username.errors }}  <!-- Exibe erros relacionados ao campo -->
+            <label for="{{ field.id_for_label }}">{{field.label}}: </label><br>
+            <p>{{ field }}</p>  <!-- Renderiza o campo de nome de usuário -->
+            {{ field.errors }}  <!-- Exibe erros relacionados ao campo -->
         </div> 
-        <div>
-            <label for="{{ form.password.id_for_label }}">Senha:</label>
-            {{ form.password }}  <!-- Renderiza o campo de senha -->
-            {{ form.password.errors }}  <!-- Exibe erros relacionados ao campo -->
-        </div>
-
-        <div>
-            <label for="{{ form.password_confirm.id_for_label }}">Confirmar Senha:</label>
-            {{ form.password_confirm }}  <!-- Renderiza o campo de confirmação de senha -->
-            {{ form.password_confirm.errors }}  <!-- Exibe erros relacionados ao campo -->
-        </div>
-
-        <div>
-            <label for="{{ form.email.id_for_label }}">E-mail:</label>
-            {{ form.email }}  <!-- Renderiza o campo de e-mail -->
-            {{ form.email.errors }}  <!-- Exibe erros relacionados ao campo -->
-        </div>
-
-        <div>
-            <label for="{{ form.user_phoneNum.id_for_label }}">Telefone:</label>
-            {{ form.user_phoneNum }}  <!-- Renderiza o campo de telefone -->
-            {{ form.user_phoneNum.errors }}  <!-- Exibe erros relacionados ao campo -->
-        </div>
-
-        <div>
-            <label for="{{ form.user_age.id_for_label }}">Idade:</label>
-            {{ form.user_age }}  <!-- Renderiza o campo de idade -->
-            {{ form.user_age.errors }}  <!-- Exibe erros relacionados ao campo -->
-        </div>
-
-        <div>
-            <label for="{{ form.cep.id_for_label }}">CEP:</label>
-            {{ form.cep }}  <!-- Renderiza o campo de preferências -->
-            {{ form.cep.errors }}  <!-- Exibe erros relacionados ao campo -->
-        </div>
-
-        <div>
-            <label for="{{ form.pref_adopt.id_for_label }}">Preferências de Adoção:</label>
-            {{ form.pref_adopt }}  <!-- Renderiza o campo de preferências -->
-            {{ form.pref_adopt.errors }}  <!-- Exibe erros relacionados ao campo -->
-        </div>
-
-        
-
+        {% endfor %}
         <button type="submit">Cadastrar</button>
+        
     </form>
 
     <div>

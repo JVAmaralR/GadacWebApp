@@ -11,7 +11,8 @@ class UserRegisterForm(forms.ModelForm):
     class Meta:
         model = usermodel
         fields = ['username', 'email', 'user_phoneNum', 'user_age', 'pref_adopt',  'cep']  
-
+        widgets = {'pref_adopt':forms.TextInput(attrs={'size':40, 'maxlength':200})}
+        
     def clean(self):
         cleaned_data = super().clean()
         password = cleaned_data.get("password")
