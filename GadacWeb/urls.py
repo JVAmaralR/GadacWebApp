@@ -28,6 +28,7 @@ urlpatterns = [
 
     #Rota provisoria pra testar o redirecionamento do login. Tenho TDAH te amo jaum (ASS: Irlan, Elias e Xande)
     path('', lambda r: HttpResponse('Twenty one pilots'), name='index'),
+    path("navbar/", include("Webapp.urls"))
     
 ]
 

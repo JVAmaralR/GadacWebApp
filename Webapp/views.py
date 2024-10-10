@@ -26,3 +26,6 @@ class UserLoginView(auth_views.LoginView):
 
     def get_success_url(self):
         return self.success_url
+
+def navbar(request):
+    return render(request, "teste-navbar.html")
