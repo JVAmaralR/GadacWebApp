@@ -14,13 +14,13 @@
         {% csrf_token %}  <!-- Proteção contra CSRF -->
         {{ form.non_field_errors }}  <!-- Exibe erros globais do formulário -->
 
-        {% for field in form %}
+        {% for field in form %} <!--Esse for faz um loop para cada campo do formulário-->
         <div>
             <label for="{{ field.id_for_label }}">{{field.label}}: </label><br>
             <p>{{ field }}</p>  <!-- Renderiza o campo de nome de usuário -->
             {{ field.errors }}  <!-- Exibe erros relacionados ao campo -->
         </div> 
-        {% endfor %}
+        {% endfor %} <!--Fim do campo-->
         <button type="submit">Cadastrar</button>
         
     </form>
