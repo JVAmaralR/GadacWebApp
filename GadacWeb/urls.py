@@ -17,8 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from Webapp.views import UserRegisterView, UserLoginView
+from django.contrib.auth.views import LogoutView
 from django.http import HttpResponse
 from . import urls
+from django.shortcuts import render
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -27,9 +29,10 @@ urlpatterns = [
     
     path('register/', UserRegisterView.as_view(), name='register'),
     path('login/', UserLoginView.as_view(), name='login'),
+    path('logout/', LogoutView.as_view(), name='logout'),
 
     #Rota provisoria pra testar o redirecionamento do login. Tenho TDAH te amo jaum (ASS: Irlan, Elias e Xande)
-    path('', lambda r: HttpResponse('Twenty one pilots'), name='index'),
+    path('', lambda r: render(r, 'index.html'), name='index'),
     path("navbar/", include("Webapp.urls"))
     
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

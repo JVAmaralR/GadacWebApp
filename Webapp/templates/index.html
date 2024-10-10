@@ -1,0 +1,10 @@
+{% if user.is_authenticated %}
+    <p>Tu ta logado irmão</p>
+    <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Deslogar">
+    </form>
+{% else %}
+    <p>Tu n ta logado nao vei :(</p>
+    <p><a href="{% url 'login' %}">Login</a></p>
+{% endif %}

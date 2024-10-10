@@ -7,7 +7,7 @@ from django.shortcuts import redirect
 from django.contrib.auth import login
 from django.contrib.auth import views as auth_views
 from .models import usermodel
-from .forms import UserRegisterForm
+from .forms import UserRegisterForm, UserLoginForm
 
 class UserRegisterView(CreateView):
     model = usermodel
@@ -23,6 +23,7 @@ class UserRegisterView(CreateView):
 class UserLoginView(auth_views.LoginView):
     template_name = "login.html"
     success_url = reverse_lazy('index')
+    form_class = UserLoginForm
 
     def get_success_url(self):
         return self.success_url
