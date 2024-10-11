@@ -7,3 +7,7 @@ from . import views
 urlpatterns = [
 
 ]
+
+urlpatterns = [
+    
+]
