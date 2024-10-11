@@ -1,16 +1,18 @@
 body {
-    height: 100vh;
-    margin: 0;
-    display: flex;
+    height: 100vh; /* Mantém a altura da tela */
+    max-width: 10xpx; /* Define a largura máxima */
+    margin: 0 auto; /* Centraliza a div */
+    
+    display: flex; /* Flexbox para centralizar conteúdo */
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to bottom, white 33%, rgb(10, 116, 143) 33%, rgb(10, 116, 143) 66%, white 66%);
+    padding: 20px; /* Adiciona padding interno, se necessário */
 }
 
 .titulo {
-    position: absolute;
-    top: 22%;
-    left: 60%;
+    position: relative;
+    top: 7%;
+    left: 100%;
     transform: translate(-50%, -25%);
     font-size: 4rem;
     color: black;
@@ -30,6 +32,7 @@ body {
 .quadrado1 {
     top: 48%;
     left: 22%;
+    right: 50%;
     transform: translate(-60%, -60%);
     z-index: 1; /* Fica abaixo do segundo quadrado */
 }
@@ -37,7 +40,7 @@ body {
 /* Estilo do segundo quadrado (sobrepõe o primeiro) */
 .quadrado2 {
     top: 55%;
-    left: 28%;
+    left: 36%;
     transform: translate(-60%, -60%);
     z-index: 2;
     box-shadow: -2px 2px 18px rgba(0, 0, 0, 0.5);
@@ -58,12 +61,23 @@ body {
 
 .texto {
     position: absolute;
-    top: 48%;
+    top: 45%;
     left: 50%; /* Posição à direita dos quadrados e da bolinha */
     transform: translateY(-50%);
-    color: white;
+    color:black;
     font-size: 1.4rem;
     max-width: 500px; /* Define uma largura máxima para o texto */
     z-index: 5;
+    font-size: 20px;
+    
 }
 
+.container{
+    background: linear-gradient(to bottom, white 33%, rgb(10, 116, 143) 33%, rgb(10, 116, 143) 66%, white 66%);
+    width: 100px;
+    height: 1000;
+    position: relative;
+    top: -60%;
+    padding-left: 1000px;
+   
+}

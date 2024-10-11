@@ -29,15 +29,19 @@ body {
     display: flex;
     gap: 15px;
     align-items: center;
+    
+    
 }
 
 .navbar-links a {
     color: #333;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 30px;
     font-weight: bold;
     position: relative; /* Adicionado para o efeito de movimento */
     transition: color 0.3s ease, transform 0.3s ease; /* Transições suaves */
+    padding-left: 25px;
+    padding-left: 25px;
 }
 
 .navbar-links a:hover {
@@ -59,4 +63,5 @@ body {
     height: 40px;
     border-radius: 50%;
     margin-left: 15px;
+    margin-right: 40px;
 }
