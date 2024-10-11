@@ -1,8 +1,19 @@
+{% extends "global/base.html" %}
+{% load static %}
 
-{% include "global/partials/navbar.html" %}
+{% block page-content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div class="sobrenos">{% include "global/partials/sobreNos.html" %} </div> 
+</body>
+</html>
 
-{% if user.is_authenticated %}
-    <p>Bem-vindo, {{ user.username }}!</p>
-{% else %}
-  <P> vamo logar porra </p>
-{% endif %}
+
+{% endblock  %}
+

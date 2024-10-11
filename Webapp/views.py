@@ -34,5 +34,3 @@ class HomePageView(TemplateView): #define a view da home
 def custom_logout_view(request):#cria a view que desloga o user
     logout(request)  # Encerra a sessão do usuário
     return redirect('home')  # Redireciona para a página de login
-
-
