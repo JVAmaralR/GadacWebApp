@@ -121,7 +121,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-    BASE_DIR / "base"
+    BASE_DIR / "base",
+    BASE_DIR / "../Webapp/static",
 ]
 
 import os
