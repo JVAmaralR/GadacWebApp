@@ -1,12 +1,8 @@
 
+{% include "global/partials/navbar.html" %}
 
 {% if user.is_authenticated %}
-    <p>Tu ta logado irmão</p>
-    <form action="{% url 'logout' %}" method="post">
-        {% csrf_token %}
-        <input type="submit" value="Deslogar">
-    </form>
+    <p>Bem-vindo, {{ user.username }}!</p>
 {% else %}
-    <p>Tu n ta logado nao vei :(</p>
-    <p><a href="{% url 'login' %}">Login</a></p>
+  <P> vamo logar porra </p>
 {% endif %}

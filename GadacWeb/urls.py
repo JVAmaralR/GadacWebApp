@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from Webapp.views import UserRegisterView, UserLoginView
+from Webapp.views import UserRegisterView, UserLoginView, HomePageView, custom_logout_view
 from django.contrib.auth.views import LogoutView
 from django.http import HttpResponse
 from . import urls
@@ -27,13 +27,10 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     
-    path('register/', UserRegisterView.as_view(), name='register'),
-    path('login/', UserLoginView.as_view(), name='login'),
-    path('logout/', LogoutView.as_view(), name='logout'),
-
-    #Rota provisoria pra testar o redirecionamento do login. Tenho TDAH te amo jaum (ASS: Irlan, Elias e Xande)
-    path('', lambda r: render(r, 'index.html'), name='index'),
-    path("navbar/", include("Webapp.urls"))
+    path('register/', UserRegisterView.as_view(), name='register'), #View para registrar o usuario
+    path('login/', UserLoginView.as_view(), name='login'),          #View para fazer o login do usuario
+    path('logout/', custom_logout_view, name='logout'),             #View de logout não tem um html proprio
+    path('home/', HomePageView.as_view(), name='home'),             #View do index(pagina home)
     
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
