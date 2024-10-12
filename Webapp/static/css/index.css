@@ -35,3 +35,12 @@
     align-items: center;
     justify-content: center;
 }
+
+.squareallcontainer{
+    width: 600px;
+    height: 280px;
+    
+    position: absolute;
+    right: 110px;
+    top: 630px;
+}
