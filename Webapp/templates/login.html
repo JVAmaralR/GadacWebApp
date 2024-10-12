@@ -22,7 +22,7 @@
                 <form method="post">
                     {% csrf_token %}
                     {{ form.as_p }}  <!-- Exibe o formulário -->
-                    <div class="esqueceu-a-senha"><a href="#">Esqueceu a Senha?</a></div>
+                    <div class="esqueceu-a-senha"><a href="{% url 'password_reset' %}">Esqueceu a Senha?</a></div>
                     <button type="submit">Login</button>
                 </form>
                 <div class="cadastre-se">Não tem uma conta? <a href="{% url "register" %}">Cadastre-se</a></div>

@@ -34,6 +34,7 @@ class usermodel(AbstractBaseUser):      #Classe q define o user model
     username = models.CharField(max_length=30, unique=True, null=False) 
     email = models.EmailField(unique=True, null=False)
     user_id = models.AutoField(primary_key=True)
+    is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
     user_phoneNum = models.CharField(max_length=50, null=True)
