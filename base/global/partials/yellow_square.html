@@ -1,0 +1,19 @@
+{% load static %} <!-- Carrega os arqquivos estáticos. -->
+ <link rel="stylesheet" href="{% static 'static/css/yellow_square.css' %}"> <!-- Carrega o CSS. -->
+
+ <body>
+    <div class="container">
+        <div class="square-container">
+            <a href="#"><div class="square"><img src="{% static '../static/img/icon-01.png' %}" alt=""></div></a>
+            <a href="#"><p><strong>Onde Estamos</strong></p></a>
+        </div>
+        <div class="square-container">
+            <a href="https://www.instagram.com/gadaccarpinaoficial/"><div class="square"><img src="{% static '../static/img/icon-02.png' %}" alt=""></div></a>
+            <a href="https://www.instagram.com/gadaccarpinaoficial/"><p><strong>Nossas Redes</strong></p></a>
+        </div>
+        <div class="square-container">
+            <a href="#"><div class="square"><img src="{% static '../static/img/icon-03.png' %}" alt=""></div></a>
+            <a href="#"><p><strong>Faça uma Doação</strong></p></a>
+        </div>
+    </div>
+ </body>
