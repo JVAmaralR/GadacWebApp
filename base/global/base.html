@@ -1,23 +1,25 @@
 {% block page-content %}
 {% load static %}
-    <!DOCTYPE html>
+    
+{% endblock page-content %}
+<!DOCTYPE html>
     <html lang="pt-br">
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Document</title>
-            <link rel="stylesheet" href="{% static "global/static/css/style-base.css" %}">
+            <link rel="stylesheet" href="{% static 'global/static/css/style-base.css' %}">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         </head>
         <body>
             <!-- Div responsável pelo footer. -->
             <div class="footer">
-                <img src="global/static/img/01.png" alt="Rodapé da page">
+                <img src="{% static 'global/static/img/01.png' %}" alt="Rodapé da page">
             </div>
 
             <!-- Div responsável pela imagem do doutor na direta inferior. -->
             <div class="doctor-footer">
-                <img src="global/static/img/02.png" alt="Imagem do doutor no canto direito inferior">
+                <img src="{% static 'global/static/img/02.png' %}" alt="Imagem do doutor no canto direito inferior">
             </div>
 
             <!-- Div responsável pelos contatos. -->
@@ -35,4 +37,3 @@
             </div>
         </body>
     </html>
-{% endblock page-content %}

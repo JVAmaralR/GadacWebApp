@@ -1,0 +1,11 @@
+{% load static %} <!-- Carrega os arqquivos estáticos. -->
+<link rel="stylesheet" href="{% static 'global/static/css/style-peticonhome.css' %}"> <!-- Carrega o CSS. -->
+
+<div class="peticoncontainer">
+    <div class="bolinha-amarela"></div>
+    <div class="petimage">
+        <img src="{{ pet.animal_image.url }}" alt="{{ pet.animal_name }}">
+    </div>
+</div>
+
+

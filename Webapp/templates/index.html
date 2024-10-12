@@ -4,7 +4,7 @@
 {% block page-content %}
 <div class="navbar">{% include "global/partials/navbar.html" %}</div>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
 <head>
     <meta charset="UTF-8">
@@ -14,7 +14,17 @@
 <body>
 
    <div class="sobrenos"> {% include "global/partials/sobreNos.html" %} </div> 
-   <div class="adote"> </div>
+   <div class="adote"> {%include "global/partials/adote_home.html" %} </div>
+   
+   <div class="pet-container">
+        {% for pet in pets %}
+         {% if pet.animal_image %}
+            {% include "global/partials/peticonhome.html" with pet=pet %}
+            {% endif %}
+            {% endfor %}
+    </div>
+    
+
 </body>
 </html>
 

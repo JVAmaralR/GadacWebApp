@@ -1,8 +1,8 @@
 .sobrenos{
-    position: fixed; /* Fixa a div na janela de visualização */
+    position: absolute; /* Fixa a div na janela de visualização */
     top: 90px; /* Ajusta a distância do topo */
     right: 0px; /* Ajusta a distância da borda direita */
-    width: 600;
+    width: 800;
     height: 600;
     
 }
@@ -14,5 +14,25 @@
     right: 0;
     padding: 10px;
     text-align: right;
-    z-index: 2; 
+    z-index: 30; 
+}
+
+.adote{
+    width: 900px;
+    height: 300px;
+    
+    position: absolute;
+    right: 50%;
+    top: 15%;
+}
+
+.pet-container {
+    position: absolute;
+    top: 180px;
+    left: 50px;
+    display: flex;
+    width: 900px;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
 }

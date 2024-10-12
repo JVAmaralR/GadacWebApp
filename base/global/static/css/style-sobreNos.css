@@ -73,11 +73,11 @@ body {
 }
 
 .container{
-    background: linear-gradient(to bottom, white 33%, rgb(10, 116, 143) 33%, rgb(10, 116, 143) 66%, white 66%);
+    background-color: rgb(10, 151, 151);
     width: 100px;
-    height: 1000;
+    height: 300;
     position: relative;
-    top: -60%;
+    top: -5%;
     padding-left: 1000px;
    
 }

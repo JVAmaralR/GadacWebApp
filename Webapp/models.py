@@ -46,6 +46,17 @@ class usermodel(AbstractBaseUser):      #Classe q define o user model
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = ['email'] 
 
+    def has_perm(self, perm, obj=None):
+        """
+        Verifica se o usuário tem uma permissão específica.
+        """
+        return True
+        
+    def has_module_perms(self, app_label):
+        """
+        Verifica se o usuário tem permissão para acessar uma aplicação específica.
+        """
+        return True
 
 
 
@@ -59,13 +70,15 @@ class Post(models.Model): # criação do model de post
     def __str__(self):
         return self.content[:20]
 
-class Animal(models.Model): # definição do model pros pets
-    animal_id = models.AutoField(primary_key= True)
-    rescued_at = models.DateTimeField(auto_now_add = False)
+class Animal(models.Model):  # Definição do model para pets
+    animal_id = models.AutoField(primary_key=True)
+    rescued_at = models.DateTimeField(auto_now_add=False)
     animal_name = models.CharField(max_length=30)
-    animal_race = models.CharField(max_length= 100)
+    animal_race = models.CharField(max_length=100)
     animal_bio = models.TextField()
-    animal_image = models.ImageField(upload_to='animals/', blank=True, null=True)  # Adicionando campo de imagem
+    animal_image = models.ImageField(upload_to='animals/', blank=True, null=True)  # Campo de imagem
+
     def __str__(self):
-        return self.name
+        # Retornando o nome correto (animal_name)
+        return self.animal_name
     

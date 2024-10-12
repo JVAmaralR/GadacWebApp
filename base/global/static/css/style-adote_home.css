@@ -1,4 +1,20 @@
 .main{
-    background-color: blue;
+    
     width: 50px;
 }
+
+.tituloadote{
+    font-size: 2.0rem;
+    position: relative;
+    top: -70;
+    left: 750%;
+    color: rgb(15, 170, 170);
+}
+.orangeline{
+    width: 900px;
+    background-color: rgb(247, 211, 7);
+    height: 10px;
+    position: relative;
+    top: -120;
+}
+

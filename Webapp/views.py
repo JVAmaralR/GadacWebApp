@@ -6,7 +6,7 @@ from django.urls import reverse_lazy
 from django.shortcuts import redirect
 from django.contrib.auth import login, logout
 from django.contrib.auth import views as auth_views
-from .models import usermodel
+from .models import usermodel, Animal, Post
 from .forms import UserRegisterForm, UserLoginForm
 
 class UserRegisterView(CreateView): # criação da view de registro
@@ -28,8 +28,17 @@ class UserLoginView(auth_views.LoginView): #criação da view de login
     def get_success_url(self):          #redireciona da forma correta
         return self.success_url
 
-class HomePageView(TemplateView): #define a view da home
-    template_name = 'index.html' # define o arquivo html usado
+class HomePageView(TemplateView):
+    template_name = 'index.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        # Busca até 2 posts e 4 pets, incluindo mais campos se necessário
+        context['posts'] = Post.objects.only('post_image')[:2]
+        context['pets'] = Animal.objects.only('animal_image', 'animal_name')[:4]  # Adicione 'animal_name' se precisar
+
+        return context
 
 def custom_logout_view(request):#cria a view que desloga o user
     logout(request)  # Encerra a sessão do usuário
