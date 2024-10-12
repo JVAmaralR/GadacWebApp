@@ -1,7 +1,38 @@
-
-
-
 {% block page-content %}
-<!-- conteudo da pagina -->
+{% load static %}
+    <!DOCTYPE html>
+    <html lang="pt-br">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <link rel="stylesheet" href="{% static "global/static/css/style-base.css" %}">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        </head>
+        <body>
+            <!-- Div responsável pelo footer. -->
+            <div class="footer">
+                <img src="./footer.jpeg" alt="Rodapé da page">
+            </div>
 
+            <!-- Div responsável pela imagem do doutor na direta inferior. -->
+            <div class="doctor-footer">
+                <img src="./doctor-img.jpeg" alt="Imagem do doutor no canto direito inferior">
+            </div>
+
+            <!-- Div responsável pelos contatos. -->
+            <div class="contatos">
+                <!-- Link para o Instagram. -->
+                <a href="https://www.instagram.com/gadaccarpinaoficial">
+                    <!-- <i> -> Tag para gerar o ícone do Instagram. -->
+                    <p><i class="fab fa-instagram"></i>@gadaccarpinaoficial</p>
+                </a>
+                <!-- Link para o WhatsApp. -->
+                <a href="https://wa.me/5581984703791">
+                    <!-- <i> -> Tag para gerar o ícone do WhatsApp. -->
+                    <p><i class="fab fa-whatsapp"></i>(81) 9.8470-3791</p>
+                </a>
+            </div>
+        </body>
+    </html>
 {% endblock page-content %}
