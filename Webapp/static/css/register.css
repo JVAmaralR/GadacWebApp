@@ -38,7 +38,7 @@ body {
 .imagem-04 img {
     display: flex;
     width: 100%;
-    height: 120px
+    height: 100px;
 }
 
 .imagem-03 {
@@ -86,7 +86,7 @@ body {
 }
 
 /* esse é o container branco onde ficam os formularios e o button */
-.container-login { 
+.container-register {
     background-color: #FEFEFE;
     flex-direction: column;
     justify-content: center;
@@ -94,26 +94,30 @@ body {
     border-radius: 15px;
 }
 
-/* esse é o container onde fica o "Login" */
-.login-container {
+/* esse é o container onde fica o "Cadastro de Usuário" */
+.register-container {
     text-align: center;
 }
-.login-container h2 {
+.register-container h2 {
     color: #3C1915;
 }
 
 /* esse é o container do formulario */
 .form-container {
-    margin-left: 4%;
+    margin-left: 6%;
     display: flex;
     flex-direction: column; /* Alinha os filhos verticalmente */
     justify-content: center;
     align-items: center; /* Centraliza os filhos horizontalmente */
 }
 .form-container button {
-    margin-left: 3%;
+    margin-left: 2.5%;
 }
 .form-container input[type="email"],
+.form-container input[type="password"],
+.form-container input[type="text"],
+.form-container input[type="number"],
+.form-container input[type="tel"],
 .form-container input[type="password"] {
     flex: 1;
     width: 90%;
@@ -122,6 +126,7 @@ body {
     border-radius: 20px;
     font-size: 15px;
     background-color: #dddedf;
+    margin-bottom: 5px;
 }
 .form-container button {
     width: 90%;
@@ -133,27 +138,18 @@ body {
     font-size: 18px;
     cursor: pointer;
     margin-bottom: 10px;
+    margin-top: 20px;
 }
 .form-container button:hover {
     transform: scale(1.05);
 }
 
-/* esse é o container do esqueceu a senha que fica abaixo do formulario */
-.esqueceu-a-senha {
-    margin-bottom: 20px;
-    margin-right: 20px;
-    text-align: right;
-}
-
-.esqueceu-a-senha a {
-    color: #FFCC29; /* Define a cor do texto como amarelo */
-}
 
 /* esse é o container do cadastre-se que fica abaixo do button */
-.cadastre-se {
-    margin-bottom: 20px;
+.entre {
+    margin-bottom: 10px;
     color: black;
 }
-.cadastre-se a {
+.entre a {
     color: #FFCC29; /* Define a cor do texto como amarelo */
 }

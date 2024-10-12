@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{% static 'css/login.css' %}"> <!-- Carrega o CSS. -->
 </head>
 <body>
+    <div class="imagem-06"><a href="{% url "home" %}"><img src="{% static 'images/06.png' %}" alt="" ></a></div>
     <div class="imagem-05_1"><img src="{% static 'images/05.png' %}" alt="" ></div>
     <div class="imagem-05"><img src="{% static 'images/05.png' %}" alt="" ></div>
     <div class="imagem-03"><img src="{% static 'images/03.png' %}" alt="" ></div>
@@ -16,8 +17,9 @@
             <div class="login-container">
                 <h2>Login</h2>
             </div>
+            
             <div class="form-container">
-                <form method="post" id="loginForm">
+                <form method="post">
                     {% csrf_token %}
                     {{ form.as_p }}  <!-- Exibe o formulário -->
                     <div class="esqueceu-a-senha"><a href="#">Esqueceu a Senha?</a></div>
