@@ -32,6 +32,9 @@ class UserRegisterForm(forms.ModelForm): #Criação do form de registro
 
 class UserLoginForm(AuthenticationForm):     #criação do forms de login
     username = forms.EmailField(label="Email")
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['username'].widget.attrs.update({'maxlength':60})
     
     def clean(self):   #verifica se os dados foram inseridos da forma correta e de forma limpa                    
         email = self.cleaned_data.get('username')
@@ -40,6 +43,7 @@ class UserLoginForm(AuthenticationForm):     #criação do forms de login
         if email and password:
             try:
                 user = usermodel.objects.get(email=email)
+                self.cleaned_data.update({'username':user.username})
             except:
                 raise forms.ValidationError("Usuario com este email não foi encontrado.")
         if not user.check_password(password):

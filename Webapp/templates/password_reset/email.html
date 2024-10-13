@@ -1,0 +1,11 @@
+{% autoescape off %}
+Olá {{ user.username }},
+    
+Você solicitou a redefinição de sua senha. Para continuar, clique no link abaixo:
+    
+<a href="{{ protocol }}://{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}">
+Redefinir minha senha
+</a>
+
+Se você não solicitou esta alteração, por favor, ignore este e-mail.
+{% endautoescape %}

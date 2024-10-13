@@ -2,10 +2,12 @@ from django.shortcuts import render
 from django.contrib.auth import login
 from django.views.generic import CreateView, TemplateView
 from django.views.generic.edit import CreateView
+from django.contrib.auth import authenticate
 from django.urls import reverse_lazy
 from django.shortcuts import redirect
 from django.contrib.auth import login, logout
 from django.contrib.auth import views as auth_views
+from django.http import HttpResponseRedirect
 from .models import usermodel, Animal, Post
 from .forms import UserRegisterForm, UserLoginForm
 
@@ -22,8 +24,32 @@ class UserRegisterView(CreateView): # criação da view de registro
 
 class UserLoginView(auth_views.LoginView): #criação da view de login
     template_name = "login.html"        # define o arquivo html usado
-    success_url = reverse_lazy('index') #define para onde sera redirecionado caso seja concluido o login
+    success_url = reverse_lazy('home') #define para onde sera redirecionado caso seja concluido o login
     form_class = UserLoginForm           # define o form que sera usado
+
+    def post(self, request, *args, **kwargs):
+        form = self.form_class(request, data=request.POST)
+
+        if form.is_valid():
+            # Autentica o usuário
+            email = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password')
+            user = authenticate(request, username=email, password=password)
+
+            if user is not None:
+                if user.is_active:
+                    # Faz login
+                    login(request, user)
+                    return HttpResponseRedirect(self.get_success_url())
+                else:
+                    # Usuário está inativo
+                    form.add_error(None, "Esta conta está inativa.")
+            else:
+                # Usuário ou senha incorretos
+                form.add_error(None, "Email ou senha incorretos.")
+        
+        # Se o formulário não for válido, renderiza a página de login com os erros
+        return render(request, self.template_name, {'form': form})
 
     def get_success_url(self):          #redireciona da forma correta
         return self.success_url

@@ -36,7 +36,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'gadacemailservice@gmail.com'
-EMAIL_HOST_PASSWORD = 'gadac383840'
+EMAIL_HOST_PASSWORD = 'eojn szqu nynj xtqz'
 DEFAULT_FROM_EMAIL = 'Gadac <gadacemailservice@gmail.com>'
 
 
