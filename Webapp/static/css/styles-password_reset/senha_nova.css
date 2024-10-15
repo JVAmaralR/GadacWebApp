@@ -66,7 +66,7 @@ body {
 .imagem-05_1 {
     position: absolute;
     z-index: -1;
-    margin-left: 580px;
+    margin-left: 560px;
     margin-top: 260px;
 }
 .imagem-05_1 img {
@@ -111,6 +111,7 @@ body {
     align-items: center; /* Centraliza os filhos horizontalmente */
 }
 .form-container button {
+    margin-top: 10px;
     margin-left: 3%;
 }
 .form-container input[type="email"],
