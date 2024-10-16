@@ -2,7 +2,7 @@ body {
     background-color: rgb(247, 242, 242);
 }
 
-/* Define as configurações para posicionar a imagem do footer (Rodapé) */
+/* Configurações do footer */
 .footer {
     position: absolute;
     bottom: 0;
@@ -12,62 +12,81 @@ body {
     height: auto;
 }
 
-/* Define o tamanho da imagem do footer (Rodapé). */
 .footer img {
-    position: absolute;
-    display: flex;
     width: 100%;
     height: 120px;
 }
 
-/* Define as configurações dos contatos.  */
+/* Configurações dos contatos */
 .contatos {
     display: flex;
     color: #0197B2;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 15px;
     position: absolute;
-    bottom: -100;
-    text-decoration: none;
+    bottom: 10px; /* Ajuste este valor conforme necessário */
+    left: 80px; /* Adicione 'px' */
     z-index: 1;
-    left: 80;
 }
 
-/* Define a posição dos contatos. */
 .contatos p {
-    margin-bottom: -0px;
+    margin-bottom: 0;
     margin-right: 12px;
 }
 
 .contatos i {
-    margin-right: 8px; /* Espaço entre o ícone e o texto. */
-    font-size: 18px; /* Tamanho do ícone. */
-    color: #0197B2; /* Cor do ícone. */
+    margin-right: 8px;
+    font-size: 18px;
+    color: #0197B2;
 }
 
 .contatos a {
-    text-decoration: none; /* Remove o sublinhado dos links. */
-    color: #0197B2; /* Define a cor do texto e dos ícones. */
+    text-decoration: none;
+    color: #0197B2;
 }
 
 .contatos a:hover {
-    color: #017a8a; /* Cor diferente ao passar o mouse. */
+    color: #017a8a;
 }
 
-
-/* Define as configurações para posicionar a imagem do doutor no canto inferior direito. */
+/* Configurações do doutor */
 .doctor-footer {
-    display: absolute;
-    width: 20px;
     position: absolute;
-    bottom: -90;
-    right: 200px;
+    width: 200px; /* Corrija a largura se necessário */
+    bottom: 10px; /* Ajuste para a posição desejada */
+    right: 20px; /* Adicione 'px' */
     z-index: 1;
 }
 
-/* Configurações do tamanho da imagem. */
 .doctor-footer img {
-    display: flex;
-    width: 200px;
+    width: 100%; /* Ajuste o tamanho da imagem */
     height: auto;
 }
+/* Configurações das imagens */
+.base-imagem-container {
+    position: absolute;
+    bottom: 205px; 
+    right: 0; 
+    display: flex;
+    width: auto; 
+}
+
+.base-imagem-container img {
+    width: 170px; 
+    height: auto; 
+    margin-left: 120px; 
+}
+/* Configurações da 2 imagem */
+.base-imagem-container2{
+    position: absolute;
+    bottom: 505px; 
+    right: 0; 
+    display: flex;
+    width: auto; 
+}
+.base-imagem-container2 img{
+    width: 170px; 
+    height: auto; 
+    margin-left: 120px; 
+}
+
