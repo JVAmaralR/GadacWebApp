@@ -5,7 +5,7 @@ body {
 /* Configurações do footer */
 .footer {
     position: absolute;
-    bottom: 0;
+    bottom: -120;
     left: 0;
     display: flex;
     width: 100%;
@@ -24,7 +24,7 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 15px;
     position: absolute;
-    bottom: 10px; /* Ajuste este valor conforme necessário */
+    bottom: -110px; /* Ajuste este valor conforme necessário */
     left: 80px; /* Adicione 'px' */
     z-index: 1;
 }
@@ -53,7 +53,7 @@ body {
 .doctor-footer {
     position: absolute;
     width: 200px; /* Corrija a largura se necessário */
-    bottom: 10px; /* Ajuste para a posição desejada */
+    bottom: -120px; /* Ajuste para a posição desejada */
     right: 20px; /* Adicione 'px' */
     z-index: 1;
 }

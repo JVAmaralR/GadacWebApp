@@ -1,9 +1,10 @@
 .sobrenos{
     position: absolute; /* Fixa a div na janela de visualização */
     top: 90px; /* Ajusta a distância do topo */
-    right: 0px; /* Ajusta a distância da borda direita */
+    right: 10px; /* Ajusta a distância da borda direita */
     width: 800;
     height: 600;
+    
 }
 
 .navbar{
@@ -39,8 +40,14 @@
 .squareallcontainer{
     width: 600px;
     height: 280px;
-    
+    z-index: 10;
     position: absolute;
     right: 110px;
-    top: 630px;
+    top: 580px;
+}
+
+.post-index-container{
+    width: 700px;
+    height: 400px;
+    background-color: blueviolet;
 }

@@ -40,8 +40,7 @@ body {
     font-weight: bold;
     position: relative; /* Adicionado para o efeito de movimento */
     transition: color 0.3s ease, transform 0.3s ease; /* Transições suaves */
-    padding-left: 25px;
-    padding-left: 25px;
+
 }
 
 .navbar-links a:hover {

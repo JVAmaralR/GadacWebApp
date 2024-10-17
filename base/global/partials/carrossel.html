@@ -1,0 +1,14 @@
+{% load static %} <!-- Carrega os arqquivos estáticos. -->
+ <link rel="stylesheet" href="{% static 'global/static/css/carrossel.css' %}"> <!-- Carrega o CSS. -->
+<script src="{% static 'global/static/javaescript/carrossel.js' %}" defer></script>
+
+<body>
+    <div class="container-slider">
+        <button id="prev-button"><img src="{% static 'global/static/img/back.png' %}" alt=""></button>
+        <div class="container-images">
+            <img src="" alt="" class="slider on">
+            <img src="" alt="" class="slider">
+        </div>
+        <button id="next-button"><img src="{% static 'global/static/img/next.png' %}" alt=""></button>
+    </div>
+</body>

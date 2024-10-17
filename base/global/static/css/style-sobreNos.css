@@ -1,22 +1,17 @@
-body {
-    height: 100vh; /* Mantém a altura da tela */
-    max-width: 10xpx; /* Define a largura máxima */
-    margin: 0 auto; /* Centraliza a div */
-    
-    display: flex; /* Flexbox para centralizar conteúdo */
-    align-items: center;
-    justify-content: center;
-    padding: 20px; /* Adiciona padding interno, se necessário */
-}
 
 .titulo {
     position: relative;
-    top: 7%;
-    left: 100%;
-    transform: translate(-50%, -25%);
-    font-size: 4rem;
+    width: 400px;
+    height: 80px;
+    top: 8%;
+    left: 45%;
+    font-size: 28px;
     color: black;
     z-index: 10; /* Sobrepõe os outros elementos */
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Estilos gerais para os quadrados */
@@ -62,7 +57,7 @@ body {
 .texto {
     position: absolute;
     top: 45%;
-    left: 50%; /* Posição à direita dos quadrados e da bolinha */
+    left: 45%; /* Posição à direita dos quadrados e da bolinha */
     transform: translateY(-50%);
     color:black;
     font-size: 1.4rem;
@@ -72,12 +67,18 @@ body {
     
 }
 
-.container{
+.cyan-container{
     background-color: rgb(10, 151, 151);
-    width: 100px;
-    height: 300;
+    width: 800px;
+    height: 300px;
     position: relative;
-    top: -5%;
-    padding-left: 1000px;
-   opacity: 80%;
+    top: 10%;
+    right: -1%;
+   opacity: 80%
+}
+
+.container-sobre{
+    display: relative;
+    width: 800;
+    height: 600;
 }
