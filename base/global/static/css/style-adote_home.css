@@ -4,9 +4,11 @@
 }
 
 .tituloadote{
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 5px;
     font-size: 2.0rem;
     position: relative;
-    top: -70;
+    top: -30;
     left: 750%;
     color: rgb(15, 170, 170);
 }
@@ -15,6 +17,6 @@
     background-color: rgb(247, 211, 7);
     height: 10px;
     position: relative;
-    top: -120;
+    top: -30;
 }
 

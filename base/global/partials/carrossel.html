@@ -6,8 +6,8 @@
     <div class="container-slider">
         <button id="prev-button"><img src="{% static 'global/static/img/back.png' %}" alt=""></button>
         <div class="container-images">
-            <img src="" alt="" class="slider on">
-            <img src="" alt="" class="slider">
+            <img src="{{ post.post_image.url }}" alt="{{ post.content }}" class="slider on">
+            <img src="{% static 'global/static/img/banerpost.jpg' %}" alt="Bem Vindo a gadac" class="slider">
         </div>
         <button id="next-button"><img src="{% static 'global/static/img/next.png' %}" alt=""></button>
     </div>

@@ -12,20 +12,27 @@ body {
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    position: absolute;
+    top: -230px;
+    
 }
 .container-images {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 600px;
+    width: 800px;
+    height: 500px;
+    
 }
+
 .slider {
     position: absolute;
     transition: 2s;
     width: 100%;
     border-radius: 10px;
     opacity: 0;
+    
 }
 .on {
     opacity: 1;
@@ -37,8 +44,15 @@ body {
     border: none;
     background-color: transparent;
     cursor: pointer;
+    position: relative;
+    
 }
 #prev-button img, #next-button img {
     width: 100%;
     height: 100%;
+}
+.container-images img{
+ max-width: 900;
+ max-height: 500;
+ object-fit: cover
 }
