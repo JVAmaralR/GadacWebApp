@@ -1,15 +1,16 @@
 body {
-    background-color: rgb(247, 242, 242);
+    margin: 0;
 }
 
 /* Configurações do footer */
 .footer {
     position: absolute;
-    bottom: -120;
+    bottom: -140;
     left: 0;
     display: flex;
     width: 100%;
     height: auto;
+    overflow: hidden;
 }
 
 .footer img {

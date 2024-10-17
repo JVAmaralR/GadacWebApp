@@ -10,13 +10,12 @@
 
     <!-- Links de navegação. -->
     <ul class="navbar-links">
-        <li><a href="#">Doação</a></li>
+        <li><a target="_blank" href="https://nubank.com.br/cobrar/g0eyt/67118dbd-9a9e-4187-9268-5196d67da24c">Doação</a></li>
         <span class="divider"></span> <!-- Barrinha entre os links. -->
         <li><a href="#">Adote</a></li>
         <span class="divider"></span> <!-- Barrinha entre os links. -->
-        <li><a href="#">Quem Somos</a></li>
-        <span class="divider"></span> <!-- Barrinha entre os links. -->
-        <li><a href="#">Resgate</a></li>
+        
+        <li><a target="_blank" href="https://api.whatsapp.com/send?phone=5581971089075&text=Te%20amo%20jaum">Resgate</a></li>
         <span class="divider"></span> <!-- Barrinha entre os links. -->
 
         <!-- Links de autenticação. -->
@@ -29,8 +28,9 @@
         {% endif %}
     </ul>
 
-    <!-- Ícone de usuário. -->
+    
     <div class="user-icons">
-        <a href="#"><img src="{% static 'global/static/img/user-icon.png' %}" alt="Ícone de usuário"></a>
+        {% if user.is_staff == true or user.is_superuser %} <a href="{% url 'admin:index' %}"> <img src="{% static 'global/static/img/user-icon.png' %}" alt="Ícone de usuário"></a> {% endif %}
     </div>
+
 </nav>

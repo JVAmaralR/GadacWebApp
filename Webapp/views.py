@@ -60,9 +60,9 @@ class HomePageView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
-        # Busca até 2 posts e 4 pets, incluindo mais campos se necessário
-        context['posts'] = Post.objects.only('post_image')[:2]
-        context['pets'] = Animal.objects.only('animal_image', 'animal_name')[:4]  # Adicione 'animal_name' se precisar
+        # Corrigido de 'post_content' para 'content'
+        context['post'] = Post.objects.only('post_image', 'content').last()  
+        context['pets'] = Animal.objects.only('animal_image', 'animal_name')[:4]
 
         return context
 
