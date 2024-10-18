@@ -58,3 +58,10 @@
     margin-top: 40px;
    
 }
+
+.footer-geral{
+    position: relative;
+    bottom: -1000;
+    margin: 0%;
+    padding: 0%;
+}

@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Webapp.views import UserRegisterView, UserLoginView, HomePageView, custom_logout_view
+from Webapp.views import UserRegisterView, UserLoginView, HomePageView, custom_logout_view, AdotePageView
 from django.contrib.auth import views as auth_views
 from django.conf import settings
 from django.conf.urls.static import static
@@ -28,6 +28,7 @@ urlpatterns = [
     path('register/', UserRegisterView.as_view(), name='register'), #View para registrar o usuario
     path('login/', UserLoginView.as_view(), name='login'),          #View para fazer o login do usuario
     path('logout/', custom_logout_view, name='logout'),             #View de logout não tem um html proprio
+    path('adote/', AdotePageView.as_view(), name='adote'),
     
     #Rotas para redefinição de senha
     path('password_reset/', auth_views.PasswordResetView.as_view(template_name='password_reset/password_reset_email_form.html', email_template_name='password_reset/email.html'), name='password_reset'), #Rota onde pede o email

@@ -1,0 +1,25 @@
+{% extends "global/base.html" %}
+{% load static %}
+{% block page-content %}
+<div class="adote_nav">{% include "global/partials/navbar.html" %}</div>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/adote.css' %}"> <!-- Carrega o CSS. -->
+</head>
+    <body>
+        <div class="animais_container">
+            {% for pet in pets %}
+                <div class="animais_item">
+                    {% include "global/partials/petadote.html" %}
+                </div>
+            {% endfor %}
+        </div>
+    </body>
+    
+
+
+{% endblock page-content %}
+

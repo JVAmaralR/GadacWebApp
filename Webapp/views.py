@@ -10,6 +10,7 @@ from django.contrib.auth import views as auth_views
 from django.http import HttpResponseRedirect
 from .models import usermodel, Animal, Post
 from .forms import UserRegisterForm, UserLoginForm
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 class UserRegisterView(CreateView): # criação da view de registro
     model = usermodel               # define o model usado na view
@@ -62,10 +63,21 @@ class HomePageView(TemplateView):
 
         # Corrigido de 'post_content' para 'content'
         context['post'] = Post.objects.only('post_image', 'content').last()  
-        context['pets'] = Animal.objects.only('animal_image', 'animal_name')[:4]
+        context['pets'] = Animal.objects.only('animal_image', 'animal_name').order_by('-animal_id')[:4]
 
         return context
 
 def custom_logout_view(request):#cria a view que desloga o user
     logout(request)  # Encerra a sessão do usuário
     return redirect('home')  # Redireciona para a página de login
+
+
+class AdotePageView(LoginRequiredMixin, TemplateView):
+    template_name = 'adote.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        context['pets'] = Animal.objects.only('animal_id', 'rescued_at', 'animal_name', 'animal_race', 'animal_bio', 'animal_image', 'animal_gene').all()  
+        return context
+

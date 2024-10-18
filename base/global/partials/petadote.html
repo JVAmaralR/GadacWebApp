@@ -1,0 +1,37 @@
+{% load static %} <!-- Carrega os arqquivos estáticos. -->
+<link rel="stylesheet" href="{% static 'global/static/css/petadote.css' %}"> <!-- Carrega o CSS. -->
+
+<div class="animal_container">
+
+    <div class="photo_colun">
+        <div class="image_container"><img src="{{ pet.animal_image.url }}" alt="{{ pet.animal_name }}"></div>
+
+
+        <div class="gen_id">
+            {% if pet.animal_gene == 'macho' or pet.animal_gene == 'Macho' %}
+                <img src="{% static 'global/static/img/machinho.png' %}" alt="Sexo do animal, Macho">
+            {% else %}
+                <img src="{% static 'global/static/img/feminha.png' %}" alt="Sexo do animal, Fêmea">
+            {% endif %}
+        </div>
+
+
+
+        <div class="resgate_container"><strong><p><span id="data_de_resgate">Data de Resgate:</span><br>{{ pet.rescued_at }}</p></strong></div>
+    </div>
+
+    <div class="name_colun">
+        <div class="name_container"><strong><p>{{ pet.animal_name }}</p></strong></div>
+        <div class="divider_name"></div>
+        <div class="bio_container"><strong><p>Bio: {{ pet.animal_bio }}</p></strong></div>
+    </div>
+
+</div>
+
+
+<!--  <p>ID: {{ pet.animal_id }}</p> 
+<p>Raça: {{ pet.animal_race }}</p>
+
+{{ pet.animal_gene }}
+  -->
+

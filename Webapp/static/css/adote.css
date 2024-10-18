@@ -1,0 +1,32 @@
+.animais_container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a linha seguinte */
+    width: 100%;
+    height: auto;
+    z-index: 30;
+    opacity: 95%;
+    justify-content: center; /* Centraliza os itens na linha */
+}
+
+.animais_item {
+    flex: 1 0 30%; /* Cada item ocupa no mínimo 30% da largura, mas pode crescer */
+    max-width: 400rem; /* Limita a largura máxima do item */
+    margin: 1rem; /* Espaçamento entre os itens */
+}
+
+@media (min-width: 600px) {
+    .animais_container {
+        z-index: 60;
+    }
+
+    .animais_item {
+        flex: 1 0 30%; /* Ajusta para ocupar 20% da largura em telas maiores */
+    }
+}
+
+.footer-geral{
+    position: relative;
+    bottom: 40;
+    margin: 0%;
+    padding: 0%;
+}

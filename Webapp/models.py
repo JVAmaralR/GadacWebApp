@@ -72,12 +72,18 @@ class Post(models.Model): # criação do model de post
         return self.content[:20]
 
 class Animal(models.Model):  # Definição do model para pets
+    GENDER_CHOICES = [
+        ('macho', 'Macho'),
+        ('femea', 'Fêmea'),
+    ]
+
     animal_id = models.AutoField(primary_key=True)
-    rescued_at = models.DateTimeField(auto_now_add=False)
+    rescued_at = models.DateField(auto_now_add=False)
     animal_name = models.CharField(max_length=30)
     animal_race = models.CharField(max_length=100)
     animal_bio = models.TextField()
     animal_image = models.ImageField(upload_to='animals/', blank=True, null=True)  # Campo de imagem
+    animal_gene = models.CharField(max_length=6, choices=GENDER_CHOICES,)
 
     def __str__(self):
         # Retornando o nome correto (animal_name)
