@@ -157,3 +157,45 @@ body {
 .cadastre-se a {
     color: #FFCC29; /* Define a cor do texto como amarelo */
 }
+
+
+/* Responsividade */
+@media (max-width: 960px) {
+    .imagem-01 {
+        margin-right: 50px;
+    }
+    .imagem-05_1 {
+        display: none;
+    }
+    .imagem-03 {
+        margin-right: -450px;
+        position: relative;
+    }
+}
+@media (max-width: 860px) {
+    .imagem-01 {
+        display: none;
+    }
+    .imagem-03 {
+        position: absolute;
+        margin-top: -550px;
+        margin-right: 60px;
+    }
+    .imagem-05 {
+        display: none;
+    }
+}
+@media (max-width: 700px) {
+    .container-login { 
+        margin-top: 80px;
+    }
+    .imagem-03 {
+        margin-top: -480px;
+        margin-right: -50px;
+    }
+}
+@media (max-width: 560px) {
+    .imagem-03 {
+        display: none;
+    }
+}

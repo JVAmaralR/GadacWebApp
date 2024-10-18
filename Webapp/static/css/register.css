@@ -92,6 +92,8 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 /* esse é o container onde fica o "Cadastro de Usuário" */
@@ -152,4 +154,16 @@ body {
 }
 .entre a {
     color: #FFCC29; /* Define a cor do texto como amarelo */
+}
+
+
+/* Responsividade */
+@media (max-width: 1100px) {
+    .imagem-01 {
+        display: none;
+    }
+    .container-register {
+        margin-top: 250px;
+        margin-bottom: 20px;
+    }
 }

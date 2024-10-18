@@ -92,6 +92,9 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 15px;
+    margin-top: 50PX;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 /* esse é o container onde fica o "Login" */
@@ -157,4 +160,15 @@ body {
 }
 .cadastre-se a {
     color: #FFCC29; /* Define a cor do texto como amarelo */
+}
+
+
+@media (max-width: 600px) {
+    .container-login {
+        margin-top: 100px;
+        margin-bottom: 20px;
+    }
+    .imagem-04 {
+        display: none;
+    }
 }

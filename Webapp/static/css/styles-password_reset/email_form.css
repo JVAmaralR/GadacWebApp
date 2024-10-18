@@ -158,3 +158,15 @@ body {
 .cadastre-se a {
     color: #FFCC29; /* Define a cor do texto como amarelo */
 }
+
+
+@media (max-width: 970px) {
+    .imagem-01 {
+        margin-right: 50px;
+    }
+}
+@media (max-width: 850px) {
+    .imagem-01 {
+        display: none;
+    }
+}

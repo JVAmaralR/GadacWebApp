@@ -13,6 +13,8 @@ body {
     border-radius: 20px;
     width: 500px;
     height: 350px;
+    border-left: 40px;
+    border-right: 40px;
 }
 h1 {
     font-size: 25px;
