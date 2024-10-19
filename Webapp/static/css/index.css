@@ -1,3 +1,7 @@
+.background {
+    width: 100%;
+    height: 1200px;
+}
 .sobrenos{
     position: absolute; /* Fixa a div na janela de visualização */
     top: 90px; /* Ajusta a distância do topo */
@@ -20,7 +24,6 @@
 .adote{
     width: 900px;
     height: 300px;
-    
     position: absolute;
     right: 50%;
     top: 15%;
@@ -51,7 +54,7 @@
     height: 500px;
     position: absolute;
     top: 430px;
-    left: 100px;
+    right: 900px;
     overflow: hidden;
     background: linear-gradient(135deg, rgba(255, 165, 0, 0.8), rgba(255, 200, 0, 0.8), #E69400);
     border-radius: 20px;
@@ -64,4 +67,97 @@
     bottom: -1000;
     margin: 0%;
     padding: 0%;
+}
+
+/* Responsividade */
+@media (max-width: 1700px) {
+    .post-index-container{
+        position: absolute;
+        top: 430px;
+        right: 450px;
+    }
+    .adote {
+        position: absolute;
+        right: 23%;
+        top: 15%;
+    }
+    .sobrenos{
+        position: absolute; /* Fixa a div na janela de visualização */
+        top: 1100px; /* Ajusta a distância do topo */
+        right: 450px; /* Ajusta a distância da borda direita */
+    }
+    .squareallcontainer{
+        position: absolute;
+        right: 550px;
+        top: 1700px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .post-index-container{
+        position: absolute;
+        top: 430px;
+        right: 230px;
+    }
+    .adote {
+        position: absolute;
+        right: 13%;
+        top: 15%;
+    }
+    .sobrenos{
+        position: absolute; /* Fixa a div na janela de visualização */
+        top: 1100px; /* Ajusta a distância do topo */
+        right: 250px; /* Ajusta a distância da borda direita */
+    }
+    .squareallcontainer{
+        position: absolute;
+        right: 330px;
+        top: 1700px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .post-index-container{
+        position: absolute;
+        top: 430px;
+        right: 120px;
+    }
+    .adote {
+        position: absolute;
+        right: 7%;
+        top: 15%;
+    }
+    .sobrenos{
+        position: absolute; /* Fixa a div na janela de visualização */
+        top: 1100px; /* Ajusta a distância do topo */
+        right: 120px; /* Ajusta a distância da borda direita */
+    }
+    .squareallcontainer{
+        position: absolute;
+        right: 200px;
+        top: 1700px;
+    }
+
+    @media (max-width: 965px) {
+        .post-index-container{
+            position: absolute;
+            top: 430px;
+            right: 80px;
+        }
+        .adote {
+            position: absolute;
+            right: 4%;
+            top: 15%;
+        }
+        .sobrenos{
+            position: absolute; /* Fixa a div na janela de visualização */
+            top: 1100px; /* Ajusta a distância do topo */
+            right: 80px; /* Ajusta a distância da borda direita */
+        }
+        .squareallcontainer{
+            position: absolute;
+            right: 150px;
+            top: 1700px;
+        }
+    }
 }

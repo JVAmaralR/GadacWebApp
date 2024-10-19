@@ -11,21 +11,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-
-   <div class="sobrenos"> {% include "global/partials/sobreNos.html" %} </div> 
-   <div class="adote"> {%include "global/partials/adote_home.html" %} </div>
-   
-   <div class="pet-container">
-        {% for pet in pets %}
-         {% if pet.animal_image %}
-            {% include "global/partials/peticonhome.html" with pet=pet %}
-            {% endif %}
-            {% endfor %}
-    </div>
+<body><!--  --> {# #}
+    <div class="background">
+        <div class="sobrenos"> {% include "global/partials/sobreNos.html" %} </div>
+         <div class="adote"> {%include "global/partials/adote_home.html" %} </div> 
     
-    <div class="squareallcontainer"> {%include "global/partials/yellow_square.html" %} </div>
-    <div class= "post-index-container"> {%include "global/partials/carrossel.html" %} </div>
+        {#  <div class="pet-container">
+            {% for pet in pets %}
+            {% if pet.animal_image %}
+                {% include "global/partials/peticonhome.html" with pet=pet %}
+                {% endif %}
+                {% endfor %}
+        </div> #}
+        
+            <div class="squareallcontainer"> {%include "global/partials/yellow_square.html" %} </div>
+          <div class= "post-index-container"> {%include "global/partials/carrossel.html" %} </div> 
+    </div>
 </body>
 </html>
 
