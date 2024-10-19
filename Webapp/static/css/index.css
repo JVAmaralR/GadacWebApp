@@ -8,7 +8,6 @@
     right: 10px; /* Ajusta a distância da borda direita */
     width: 800;
     height: 600;
-    
 }
 
 .navbar{
@@ -54,7 +53,7 @@
     height: 500px;
     position: absolute;
     top: 430px;
-    right: 900px;
+    right: 1150px;
     overflow: hidden;
     background: linear-gradient(135deg, rgba(255, 165, 0, 0.8), rgba(255, 200, 0, 0.8), #E69400);
     border-radius: 20px;
@@ -70,6 +69,14 @@
 }
 
 /* Responsividade */
+@media (max-width: 1800px) {
+    .post-index-container{
+        position: absolute;
+        top: 430px;
+        right: 900px;
+    }
+}
+
 @media (max-width: 1700px) {
     .post-index-container{
         position: absolute;
@@ -90,6 +97,9 @@
         position: absolute;
         right: 550px;
         top: 1700px;
+    }
+    .footer-geral{
+        bottom: -2000;
     }
 }
 

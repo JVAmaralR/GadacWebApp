@@ -3,9 +3,11 @@
     width: 200px;
     height: 250px;
     display: flex;
+    margin-top: 20px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    
 }
 .bolinha-amarela {
     background-color: #FFCC29;
@@ -13,8 +15,10 @@
     display: flex;
     width: 20px; 
     height: 20px; 
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: none;
+    margin-left: 220px;
+    
 }
 .petimage {
     display: flex;
@@ -23,6 +27,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 220px;
+    
 }
 .petimage img {
     display: flex;
@@ -32,3 +38,104 @@
     object-fit: cover;
 }
 
+/* Responsividade */
+@media (max-width: 1950px) {
+    .bolinha-amarela {
+        margin-left: 50px;
+    }
+    .petimage {
+        margin-left: 50px;
+    }
+            
+}
+@media (max-width: 1850px) {
+    .bolinha-amarela {
+        margin-left: 2px;
+    }
+    .petimage {
+        margin-left: 2px;
+    }
+            
+}
+
+@media (max-width: 1767px) {
+    .bolinha-amarela {
+        margin-left: -120px;
+    }
+    .petimage {
+        margin-left: -120px;
+    }
+}
+
+@media (max-width: 1700px) {
+    .bolinha-amarela {
+        margin-left: 650px;
+    }
+    .petimage {
+        margin-left: 650px;
+    }
+            
+}
+@media (max-width: 1600px) {
+    .bolinha-amarela {
+        margin-left: 500px;
+    }
+    .petimage {
+        margin-left: 500px;
+    }
+            
+}
+@media (max-width: 1500px) {
+    .bolinha-amarela {
+        margin-left: 350px;
+    }
+    .petimage {
+        margin-left: 350px;
+    }
+}
+
+    @media (max-width: 1400px) {
+        .bolinha-amarela {
+            margin-left: 200px;
+        }
+        .petimage {
+            margin-left: 200px;
+        }
+            
+}
+@media (max-width: 1300px) {
+    .bolinha-amarela {
+        margin-left: 300px;
+    }
+    .petimage {
+        margin-left: 300px;
+    }
+            
+}
+@media (max-width: 1190px) {
+    .bolinha-amarela {
+        margin-left: 100px;
+    }
+    .petimage {
+        margin-left: 100px;
+    }
+            
+}
+@media (max-width: 1050px) {
+    .bolinha-amarela {
+        margin-left: 8px;
+    }
+    .petimage {
+        margin-left: 8px;
+    }
+            
+}
+@media (max-width: 965px) {
+    .bolinha-amarela {
+        margin-left: -20px;
+    }
+    .petimage {
+        margin-left: -20px;
+    }
+            
+}
