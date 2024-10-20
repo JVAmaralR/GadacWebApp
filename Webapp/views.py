@@ -1,12 +1,8 @@
 from django.shortcuts import render
-from django.contrib.auth import login
+from django.contrib.auth import login, logout, views as auth_views, authenticate
 from django.views.generic import CreateView, TemplateView
-from django.views.generic.edit import CreateView
-from django.contrib.auth import authenticate
 from django.urls import reverse_lazy
 from django.shortcuts import redirect
-from django.contrib.auth import login, logout
-from django.contrib.auth import views as auth_views
 from django.http import HttpResponseRedirect
 from .models import usermodel, Animal, Post
 from .forms import UserRegisterForm, UserLoginForm

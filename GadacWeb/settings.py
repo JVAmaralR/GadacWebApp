@@ -53,6 +53,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Webapp'
 ]
+# Tempo máximo da sessão em segundos (30 minutos = 1800 segundos)
+SESSION_COOKIE_AGE = 1800  # 30 minutos
+
+# Se quiser que a sessão expire ao fechar o navegador
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
+# Se você quiser renovar o tempo de sessão a cada nova solicitação (baseado em atividade)
+SESSION_SAVE_EVERY_REQUEST = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -69,7 +77,9 @@ ROOT_URLCONF = 'GadacWeb.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'base'],
+        'DIRS': [
+            BASE_DIR / 'templates',
+            BASE_DIR / 'base',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

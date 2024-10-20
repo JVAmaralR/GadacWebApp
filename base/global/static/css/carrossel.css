@@ -54,5 +54,5 @@ body {
 .container-images img{
  max-width: 900;
  max-height: 500;
- object-fit: cover
+ 
 }

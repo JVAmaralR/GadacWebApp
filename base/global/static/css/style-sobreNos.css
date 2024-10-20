@@ -32,11 +32,16 @@
     right: 50%;
     transform: translate(-60%, -60%);
     z-index: 1; /* Fica abaixo do segundo quadrado */
+    max-width: 450px;
+    overflow: hidden;
 }
 .quadrado1 img {
-    width: 100%; 
+    width: 250%;
     height: 100%;
-    object-fit: cover; 
+    position: relative;
+    right: 90%;
+    
+     
 }
 
 
@@ -51,9 +56,9 @@
     overflow: hidden;
 }
 .quadrado2 img {
-    width: 100%; 
+    width: 150%; 
     height: 100%;
-    object-fit: cover; 
+     
 }
 
 /* Estilo para a bolinha */

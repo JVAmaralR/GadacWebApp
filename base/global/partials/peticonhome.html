@@ -4,7 +4,7 @@
 <div class="peticoncontainer">
     <div class="bolinha-amarela"></div>
     <div class="petimage">
-        <img src="{{ pet.animal_image.url }}" alt="{{ pet.animal_name }}">
+       <a href="{% url 'adote' %}"> <img src="{{ pet.animal_image.url }}" alt="{{ pet.animal_name }}"></a>
     </div>
 </div>
 
