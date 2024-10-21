@@ -81,7 +81,7 @@ class Animal(models.Model):  # Definição do model para pets
     rescued_at = models.DateField(auto_now_add=False)
     animal_name = models.CharField(max_length=30)
     animal_race = models.CharField(max_length=100)
-    animal_bio = models.TextField()
+    animal_bio = models.TextField(max_length=250)
     animal_image = models.ImageField(upload_to='animals/', blank=True, null=True)  # Campo de imagem
     animal_gene = models.CharField(max_length=6, choices=GENDER_CHOICES,)
 
