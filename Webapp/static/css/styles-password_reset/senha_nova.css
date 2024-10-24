@@ -172,3 +172,7 @@ body {
         display: none;
     }
 }
+
+.errorlist {
+color: red;
+}
