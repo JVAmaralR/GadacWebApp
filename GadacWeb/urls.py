@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Webapp.views import UserRegisterView, UserLoginView, HomePageView, custom_logout_view, AdotePageView
+from Webapp.forms import NewResetPasswordForm
 from django.contrib.auth import views as auth_views
 from django.conf import settings
 from django.conf.urls.static import static
@@ -35,7 +36,7 @@ urlpatterns = [
     
     path('password_reset_done/', auth_views.PasswordResetDoneView.as_view(template_name='password_reset/password_reset_email_enviado.html'), name='password_reset_done'), #Rota que confirma o envio do email
     
-    path('password_reset/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(template_name='password_reset/password_reset_senha_nova_form.html'), name='password_reset_confirm'), #Rota para a tela de redefinir senha
+    path('password_reset/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(template_name='password_reset/password_reset_senha_nova_form.html', form_class=NewResetPasswordForm), name='password_reset_confirm'), #Rota para a tela de redefinir senha
     
     path('password_reset/done/', auth_views.PasswordResetCompleteView.as_view(template_name='password_reset/password_reset_senha_trocada.html'), name='password_reset_complete'), #Rota para a confirmação de senha trocada
     

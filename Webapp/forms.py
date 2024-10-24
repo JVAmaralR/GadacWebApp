@@ -2,8 +2,8 @@ from django import forms
 from .models import usermodel
 from django.contrib.auth import get_user_model, authenticate
 from django.contrib.auth.hashers import make_password
-from django.contrib.auth.forms import AuthenticationForm
-
+from django.contrib.auth.forms import AuthenticationForm, SetPasswordForm
+from django.utils.safestring import mark_safe
 from django import forms
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth import get_user_model
@@ -69,4 +69,7 @@ class UserLoginForm(AuthenticationForm):     #criação do forms de login
     
         return self.cleaned_data #retonas o dado limpo e correto
     
-
+class NewResetPasswordForm(SetPasswordForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        # self.fields['new_password1'].help_text = mark_safe("<h1>tenho tdah</h1>")
